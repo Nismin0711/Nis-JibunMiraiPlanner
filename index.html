@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ジブンミライプランナー with ミライをつくるラボ</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <button id="loadButton">LOAD</button>
+            <button id="saveButton">SAVE</button>
+            <input type="text" id="username" placeholder="ユーザー名">
+            <input type="text" id="age" placeholder="年齢">
+            <select id="grade">
+                <option value="collegestudent1st">大学1年生</option>
+                <option value="collegestudent2nd">大学2年生</option>
+                <option value="collegestudent3rd">大学3年生</option>
+                <option value="collegestudent4th">大学4年生</option>
+                <option value="collegestudentgraduate">大学院生</option>
+                <option value="workingadult">社会人</option>
+            </select>
+            <br>
+            <div class="api-key-input">
+                <label for="apiKey">APIキー：</label>
+                <input type="text" id="apiKey" placeholder="Open AI APIキーを入力してください">
+                <button id="setApiKeyButton">設定</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="left-column">
+            <button id="addRowButton">行を追加</button>
+            <div id="inputRows"></div>
+        </div>
+        <div class="right-column">
+            <button id="calculateButton">計算する</button>
+            <div id="totalAmount"></div>
+            <div id="advicebenesse" class="speech-bubble"></div><br>
+            <div id="advicebenessepage"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>ジブンミライプランナー with ミライをつくるラボ @2023 Nismin</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
